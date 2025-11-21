@@ -20,6 +20,16 @@ header h1 {
   gap: 24px;
 }
 
+.span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+  .span-2 {
+    grid-column: span 1;
+  }
+}
+
 article {
   background: #ffffff;
   border-radius: 16px;
@@ -34,10 +44,42 @@ article h2 {
   color: #0f172a;
 }
 
+.form-card form {
+  display: grid;
+  gap: 14px;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35);
+}
+
 .helper {
   font-size: 0.85rem;
   color: #475569;
   margin-top: 8px;
+}
+
+.helper.success {
+  color: #0f9d58;
+  font-weight: 600;
 }
 
 .inline-label {
